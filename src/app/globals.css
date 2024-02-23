@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Main';
+    src: url('../../public/medias/PPPangaia-Medium.ttf');
+}
+ 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,6 +23,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: 'Main';
   background: linear-gradient(
       to bottom,
       transparent,
