@@ -12,8 +12,7 @@ export default function Footer() {
     useEffect( () => {
         scrollYProgress.on("change", e => {
             paths.current.forEach( (path, i) => {
-                const value = transform(e, [0, 1], [-40 + (i * 40), (i * 40)])
-                path.setAttribute("startOffset", value + "%");
+                path.setAttribute("startOffset", -40 + (i * 40) + (e * 40) + "%");
             })
         })
     }, [])
@@ -44,7 +43,7 @@ const Logos = ({scrollProgress}) => {
                     [...Array(5)].map((_, i) => {
                         return <img key={`img_${i}`} className="w-[80px] h-[80px]" src={`/medias/${i+1}.jpg`} />
                     })
-                }
+                } 
             </motion.div>
         </div>
     )
