@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useScroll, transform, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 export default function Footer() {
     const container = useRef();
